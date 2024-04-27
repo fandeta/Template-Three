@@ -1,0 +1,79 @@
+/* Global Variables, Mostly Will Using it */
+:root {
+  --main-color: ;
+  --transparent-main-color: ;
+  --secondary-color: ;
+}
+:root {
+  /* --will-use-this-color-in-another-template: #5aed9d; */
+  --main-color: #2196f3;
+  --transparent-main-color-70-percent: #2195f3b3;
+  --main-color-alt: #1787e0;
+  --main-transition-duration: 0.3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --section-background: #ececec;
+}
+/* End Global Variables */
+/* Import Local Font ( Sriracha Regular font ) */
+
+@font-face {
+  font-family: CairoPlay; 
+  src: url(../fonts/fonts/new/CairoPlay-VariableFont_slnt\,wght.ttf)
+}
+.five {
+  font-family: CairoPlay;
+  font-size: 25px;
+
+}
+*::selection {
+  background-color: var(--main-color);
+  color: black;
+}
+/* Call The Font to Make it Working on all elements, Using Box Sizzing and prefixes */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: CairoPlay;
+}
+button{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+}
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+/* Small Screen  */
+@media (min-width: 768px) {
+  .container {
+    width: calc(100% - 15px);
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+/* Medium Screen  */
+@media (min-width: 992px) {
+  .container {
+    width: calc(100% - 15px);
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+}
+/* Large Screen  */
+@media (min-width: 1200px) {
+  .container {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+}
