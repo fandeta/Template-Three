@@ -140,10 +140,29 @@ h2.special-heading:hover{
   border-color: white;
   box-shadow: 0 0 2px var(--main-color);
 }
+/* The Second Component */
+span.red-color {
+  color: red;
+  font-weight: bold;
+  animation: ch-color 3s linear infinite;
+}
+@keyframes ch-color {
+  0%{
+    color: red;
+  }
+  50%{
+    color: var(--main-color);
+  }
+  100%{
+    color: red;
+  }
+}
 /* End Components */
 /* Start Header Section  */
 header {
-  margin-top: 5px;
+  position: relative;
+  z-index: 100;
+  background-color: var(--section-background);
 }
 header .container {
   display: flex;
@@ -151,7 +170,12 @@ header .container {
   justify-content: space-between;
   align-items: center;
   height: 72px;
-  box-shadow: 0 3px 10px #ddd;
+  /* box-shadow: 0 3px 10px #ddd; */
+  box-shadow:0 0 30px 4px #d7d7d7;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  top: 5px;
 }
 header .container .logo {
   display: flex;
@@ -170,6 +194,7 @@ header .container .links {
 header .container .links ul {
   display: flex;
   max-height: 72px;
+  overflow: hidden;
 }
 header .container .links ul li {
   padding-right: 15px;
@@ -180,6 +205,7 @@ header .container .links ul li {
   display: flex;
   align-items: center;
   cursor: pointer;
+  border-radius: 5px;
 }
 header .container .links ul li::before {
   content: '';
@@ -222,7 +248,7 @@ header .container .links ul li:hover::before{
   header .container .logo::before{
     content: '';
     position: absolute;
-    width: 70%;
+    width: 30%;
     margin: auto;
     height: 2px;
     background-color:#ddd;
@@ -251,5 +277,122 @@ header .container .links ul li:hover::before{
 }
 /* End Header Section  */
 /* Start Landing Section */
+.landing {
+  height: calc(100vh - 135px);
+}
+.landing::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 77px);
+  background-color: var(--section-background);
+  transform: skewY(-6deg) translateY(-105px);
+  position: absolute;
+  z-index: -1;
+}
 
+@media (max-width:767px) {
+  .landing::before {
+    height: calc(100vh - 133px);
+    transform: skewY(-8deg) translateY(-55px);
+  }
+}
+.landing .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75vh;
+  height: calc(100vh - 133px);
+}
+@media (max-width:767px) {
+  .landing .container {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .landing .container .text{
+    padding-bottom: 40px;
+  }
+}
+.landing .container .text{
+  width: 39%;
+  text-align: center;
+}
+.landing .container .text h3 {
+  margin: 20px auto;
+}
+
+.landing .container .text p {
+  line-height: 1.5;
+  color: #444;
+}
+@media (max-width:767px) {
+
+  .landing .container .text{
+    width: 70%;
+  }
+  .landing .container .text h3 {
+    font-size: 24px;
+    padding: 20px 0;
+  }
+  .landing .container .text p {
+    font-size: 14px;
+  }
+}
+.landing .container img{
+  max-width: 100%;
+  width: 50%;
+  position: relative;
+  animation: up-and-down 3s linear infinite;
+}
+@media (max-width:550px) {
+  .landing .container img {
+    width: 70%;
+  }
+}
+@keyframes up-and-down {
+  0%{
+    top: 30px;
+  }
+  50%{
+    top: 0;
+  }
+  100%{
+    top: 30px;
+  }
+
+}
+.landing .go-down {
+  position: absolute;
+  color:var(--main-color) ;
+  font-size: 25px;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition-duration: .3s ;
+}
+.landing .go-down:hover{
+  color:red;
+}
+.landing .go-down i {
+  animation: go-down 1.5s infinite linear;
+}
+@keyframes go-down {
+  0%,
+  10%,
+  20%,
+  30%,
+  40%, 
+  50%,
+  70%,
+  80%{
+    transform: translateY(5px);
+  }
+  60%,
+  95%{
+    transform: translateY(-25px);
+  }
+  100%{
+    transform: translateY(5px);
+  }
+}
 /* End Landing Section */
