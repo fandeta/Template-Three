@@ -154,7 +154,7 @@ h2.special-heading:hover{
 span.red-color {
   color: red;
   font-weight: bold;
-  animation: ch-color 3s linear infinite;
+  animation: ch-color 7s linear infinite;
 }
 @keyframes ch-color {
   0%{
@@ -201,12 +201,12 @@ header .container .logo h2{
 header .container .links {
   max-height: 72px;
 }
-header .container .links ul {
+header .container .links .nav-ul {
   display: flex;
   max-height: 72px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-header .container .links ul li {
+header .container .links .nav-ul .nav-ul-li{
   padding-right: 15px;
   padding-left: 15px;
   position: relative;
@@ -217,7 +217,8 @@ header .container .links ul li {
   cursor: pointer;
   border-radius: 5px;
 }
-header .container .links ul li::before {
+
+header .container .links .nav-ul .nav-ul-li::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -227,22 +228,145 @@ header .container .links ul li::before {
   left: -100%;
   transition-duration: var(--main-transition-duration);
 }
-header .container .links ul li a{
+header .container .links .nav-ul .nav-ul-li .nav-ul-li-a{
   display: block;
   color: black;
   font-weight: normal;
   font-size: 17px;
   transition-duration: var(--main-transition-duration);
 }
-header .container .links ul li:hover {
+header .container .links .nav-ul .nav-ul-li:hover {
   background-color: #ececec4f;
 }
-header .container .links ul li:hover a{
+header .container .links .nav-ul .nav-ul-li:hover .nav-ul-li-a{
   color: var(--main-color);
 }
-header .container .links ul li:hover::before{
+header .container .links .nav-ul .nav-ul-li:hover::before{
   left: 0;
 }
+
+/*Start mega menu  */
+header .container .links .nav-ul .last-li{
+  overflow: hidden;
+}
+header .container .links .nav-ul .last-li:hover{
+  overflow: visible;
+}
+header .container .links .nav-ul .last-li:hover .mega-menu {
+  opacity: 1;
+  z-index: 999;
+  top: 75px;
+}
+.mega-menu{
+  transition-duration: .4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  /* width: 60vw; */
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  border-bottom: 4px solid var(--main-color);
+  position: absolute;
+  top: 80px;
+  top: 120px;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+}
+@media (max-width:430px) {
+  .mega-menu {
+    width: 280px;
+  }
+  .mega-menu .links-of-sections li {
+    font-size: 14px;
+  }
+}
+@media (min-width:431px) {
+  .mega-menu {
+    width: 300px;
+  }
+  .mega-menu .links-of-sections li {
+    font-size: 16px;
+  }
+}
+@media (min-width:768px) {
+  .mega-menu {
+    width: 650px;
+  }
+  .mega-menu .links-of-sections li {
+    font-size: 17px;
+  }
+}
+.mega-menu .mega-img{
+  width: 30%;
+}
+.mega-menu .mega-img img{
+  max-width: 100%;
+}
+.mega-menu .links-of-sections{
+  caret-color: rgba(0, 0, 0, .5);
+}
+.mega-menu .links-of-sections li{
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .5s;
+
+}
+.mega-menu .links-of-sections li:hover{
+  background-color: #ffffff7d;
+  background-color: #ecececa3;
+  border-radius: 5px;
+}
+
+.mega-menu .links-of-sections li::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0%;
+  background-color: var(--main-color);
+  transition-duration: .5s;
+}
+.mega-menu .links-of-sections li:hover::before{
+  left: 0;
+  width: 100%;
+}
+.mega-menu .links-of-sections li a{
+  color: var(--main-color);
+}
+.mega-menu .links-of-sections li a i{
+  color: var(--main-color);
+  margin: 0 5px;
+}
+@media (max-width:767px) {
+  .mega-menu {
+    display: block;
+  }
+  .mega-menu .mega-img {
+    display: none;
+  }
+  .mega-menu .links-of-sections {
+    caret-color: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mega-menu .links-of-sections li {
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .5s;
+    width: 100%;
+  }
+}
+/*end mega menu  */
+
+
 /* Make Header Responsive in Tablet, Mobiles Screens */
 @media (max-width:767px) {
   header .container {
@@ -270,16 +394,16 @@ header .container .links ul li:hover::before{
     width: 100%;
     height: 65px;
   }
-  header .container .links ul li a {
+  header .container .links .nav-ul .nav-ul-li .nav-ul-li-a {
     font-size: 14px;
   }
 }
 @media (max-width:550px) {
-  header .container .links ul li a {
+  header .container .links .nav-ul .nav-ul-li .nav-ul-li-a {
     font-size: 13px !important;
     text-align: center;
   }
-  header .container .links ul li{
+  header .container .links .nav-ul .nav-ul-li{
     font-size: 8px !important;
     padding-right: 10px !important;
     padding-left: 10px !important;
