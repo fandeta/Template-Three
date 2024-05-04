@@ -188,7 +188,7 @@ div.main-title-div{
   100% {
     left: 0;
     border-radius: 0;
-    width: 50%;
+    width: 55%;
     height: 100%;
   }
 }
@@ -201,19 +201,10 @@ div.main-title-div{
   100% {
     right: 0;
     border-radius: 0;
-    width: 50%;
+    width: 55%;
     height: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
 /* The Second Component */
 span.red-color {
   color: red;
@@ -714,3 +705,237 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
   transition-duration: .3s;
 }
 /* End Gallery Section */
+/* Start Features  Section */
+.features {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 330px));
+  justify-content: center;
+}
+@media (min-width:1450px) {
+  .features .container {
+    grid-template-columns: repeat(3, minmax(270px, 330px));
+  }
+  
+}
+.features .container .main-box{
+  margin: 15px;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 5px #ececec;
+  transition-duration: .3s;
+  border: 1px solid #eee;
+}
+
+.features .container .main-box:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 0 10px 5px #ddd;
+}
+.features .container .main-box .img-box{
+  position: relative;
+  transition-duration: .3s;
+  overflow: hidden;
+}
+.features .container .main-box .img-box-1::before{
+  background-color: hsla(120, 83%, 43%, 0.45);
+}
+.features .container .main-box .img-box-2::before{
+  background-color: rgba(255, 0, 0, 0.45);
+}
+.features .container .main-box .img-box-3::before{
+  background-color: rgba(34, 34, 226, 0.4);
+}
+.features .container .main-box .img-box::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition-duration: .3s;
+}
+.features .container .main-box:hover .img-box::before{
+  background-color: transparent;
+}
+.features .container .main-box .img-box::after{
+  content: "";
+  position: absolute;
+  width: 150%;
+  background-color: white;
+  height: 50%;
+  z-index: 5;
+  bottom: -40px;
+  left: 0;
+  transform: rotate(-20deg);
+  transition-duration: .3s;
+}
+.features .container .main-box:hover .img-box::after{
+  height: 50%;
+  z-index: 5;
+  bottom: -52px;
+  left: -120px;
+  transform: rotate(20deg);
+}
+
+
+.features .container .main-box .img-box img{
+  max-width: 100%;
+}
+.features .container .main-box .info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.features .container .main-box .info h4 {
+  margin: 10px auto;
+  padding: 5px;
+  font-size: 22px;
+  position: relative;
+}
+.features .container .main-box .info h4::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  height: 3px ;
+  transform: translateX(-50%);
+  transition-duration: .3s;
+}
+.features .container .main-box:hover .info h4::before{
+  width: 120%;
+}
+.features .container .main-box .img-box-1 ~ .info h4::before {
+  background-color: rgb(20, 219, 20);
+}
+.features .container .main-box .img-box-2 ~ .info h4::before {
+  background-color: rgb(219, 20, 20);
+}
+.features .container .main-box .img-box-3 ~ .info h4::before {
+  background-color: rgb(50, 20, 219);
+}
+.features .container .main-box .info p{
+  line-height: 1.5;
+  margin: 10px auto;
+  padding: 5px;
+  font-weight: normal;
+  color:#555 ;
+}
+.features .container .main-box .info button{
+  text-align: center;
+  border: 1px solid red;
+  font-weight: normal;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px auto 15px;
+  background-color: transparent;
+  transition-duration: .3s;
+  font-weight: bold;
+}
+
+.features .container .main-box .img-box-1 ~ .info button{
+  border:1px solid rgb(20, 219, 20);
+}
+.features .container .main-box .img-box-1 ~ .info button:hover{
+  color: white;
+  border:1px solid white;
+  background-color:rgb(20, 219, 20);
+}
+.features .container .main-box .img-box-2 ~ .info button{
+  border:1px solid rgb(219, 20, 20);
+}
+.features .container .main-box .img-box-2 ~ .info button:hover{
+  background-color: rgb(219, 20, 20);
+  color: white;
+  border:1px solid white;
+}
+
+.features .container .main-box .img-box-3 ~ .info button{
+  border:1px solid rgb(50, 20, 219);
+}
+.features .container .main-box .img-box-3 ~ .info button:hover{
+  background-color:  rgb(50, 20, 219);
+  background-color:  rgb(50, 20, 219);
+  color: white;
+}
+/* End Features Section */
+/* Start Testimonials Section */
+.testimonials {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-color: var(--section-background);
+}
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px , 400px));
+  justify-content: center;
+  justify-items: center;
+}
+@media (max-width:1100px) {
+  .testimonials .container {
+    grid-template-columns: repeat(auto-fill, minmax(150px , 400px));
+}
+}
+.testimonials .container .person-box{
+  margin: 15px;
+  background-color: white;
+  /* width: 300px; */
+  position: relative;
+  border-radius: 7px;
+  transition-duration: .3s;
+}
+.testimonials .container .person-box:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+.testimonials .container .person-box .heading-details {
+  padding: 15px;
+}
+.testimonials .container .person-box .heading-details h3 {
+  font-size: 19px;
+  padding-bottom: 10px;
+}
+.testimonials .container .person-box .heading-details p {
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.testimonials .container .person-box .heading-details .stars-container{
+  font-size: 13px;
+  cursor: default;
+}
+.testimonials .container .person-box .heading-details .stars-container i.empty {
+  color: #0000009d;
+}
+.testimonials .container .person-box .heading-details .stars-container i.filled {
+  color: gold;
+}
+.testimonials .container .person-box .description-text {
+  padding: 15px;
+  padding-right: 7px;
+
+}
+.testimonials .container .person-box .description-text p{
+  color: #555;
+  line-height: 1.35;
+}
+.testimonials .container .person-box .person-photo {
+  min-width: 70px;
+  max-width: 90px;
+  position: absolute;
+  top: -35px;
+  top: -45px;
+  right: 0;
+  border: 5px solid var(--section-background);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonials .container .person-box .person-photo img{
+  max-width: 100%;
+  background-color: red;
+}
+
+/* End Testimonials Section */
