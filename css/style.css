@@ -948,7 +948,6 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
 .testimonials .container .person-box .description-text {
   padding: 15px;
   padding-right: 7px;
-
 }
 .testimonials .container .person-box .description-text p{
   color: #555;
@@ -1332,6 +1331,13 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
   padding: 10px;
   box-shadow: 0 0 18px 20px #dddddd;
   transition-duration: .3s;
+}
+@media (max-width:767px) {
+  .how-it-works .container .main-box .box {
+    flex-direction: column;
+    text-align: center;
+    }
+  
 }
 .how-it-works .container .main-box .box:hover{
   transform: translateY(-10px) scale(1.03);
