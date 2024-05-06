@@ -19,6 +19,10 @@
   font-family: CairoPlay; 
   src: url(../fonts/CairoPlay-VariableFont_slnt\,wght.ttf)
 }
+@font-face {
+  font-family: SecondFont-toNumbers; 
+  src: url(../fonts/ReemKufiFun-VariableFont_wght.ttf)
+}
 .five {
   font-family: CairoPlay;
   font-size: 25px;
@@ -719,7 +723,7 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
 }
 /* End Gallery Section */
 /* Start Features  Section */
-.features {
+section.features {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
 }
@@ -1142,7 +1146,7 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
   transform: skewX(-40deg);
 }
 .services .container .srv-box .num-paragraph p:first-child{
-  font-family: cursive;
+  font-family: SecondFont-toNumbers;
   font-weight: bold;
   font-size: 20px;
   color: white;
@@ -1235,7 +1239,7 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
   text-align: center;
   padding: 4px;
   border-radius: 5px;
-  font-family: cursive;
+  font-family: SecondFont-toNumbers;
   color: var(--main-color);
   font-size: 14px;
 }
@@ -1256,7 +1260,7 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
   background-color: var(--section-background);
 }
 .how-it-works .main-title span {
-  font-family: cursive;
+  font-family: SecondFont-toNumbers;
   font-weight: bold;
 }
 .how-it-works .container{
@@ -1395,7 +1399,7 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
   transition-duration: .3s;
   font-size: 30px;
   font-weight: bold;
-  font-family: cursive;
+  font-family: SecondFont-toNumbers;
   color:var(--main-color);
   padding-bottom: 9px;
   border-bottom: 2px solid #ececec;
@@ -1412,7 +1416,7 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
 }
 .events .all-content .content .info h3 span{
   font-weight: bold;
-  font-family: cursive;
+  font-family: SecondFont-toNumbers;
 
 }
 .events .all-content .content .info p{
@@ -1451,7 +1455,7 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
   }
 }
 .events .container form input[type="email"]{
-  font-family: cursive;
+  font-family: SecondFont-toNumbers;
   padding: 10px;
   border-radius: 20px;
   outline: none;
@@ -1463,7 +1467,7 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
   color: #9c9c9c;
   font-size: 13px;
   font-weight: bold;
-}
+}&
 .events .container form input[type="email"]:focus::placeholder{
   opacity: 0;
 }
@@ -1483,3 +1487,160 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
 }
 
 /* End Event Section */
+/* Start Pricing Section */
+.pricing {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-color: var(--section-background);
+}
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width:1250px) {
+  .pricing .container {
+    grid-template-columns: repeat(3, minmax(300px , 420px));
+  }
+}
+.pricing .container .plan {
+  background-color: white;
+  margin: 20px;
+  transition-duration: .3s;
+  position: relative;
+  z-index: 2;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.pricing .container .plan:nth-child(2) span{
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 32px;
+  height: 145px;
+  background-color: var(--main-color);
+}
+.pricing .container .plan:nth-child(2) span:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  border-color: transparent transparent white transparent;
+  border-width: 16px;
+  border-style: solid;
+}
+.pricing .container .plan:nth-child(2) span::after{
+  content: 'Most Popular';
+  position: absolute;
+  transform: rotate(90deg);
+  text-align: center;
+  top: 45px;
+  width: 136px;
+  font-size: 16px;
+  left: -50px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.pricing .container .plan:hover {
+  transform: translateY(-15px);
+  box-shadow:0 0 10px #00000042;
+
+}
+.pricing .container .plan::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 50%;
+  background-color: #f5f5f5;
+  background-color: #f5f5f588;
+  z-index: -1;
+  transition-duration: .8s;
+}
+.pricing .container .plan:hover::before{
+  width: 100%;
+}
+.pricing .container .plan::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 50%;
+  background-color: #f5f5f5;
+  background-color: #f5f5f588;
+  z-index: -1;
+  transition-duration: .8s;
+}
+.pricing .container .plan:hover::after{
+  width: 100%;
+}
+.pricing .container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pricing .container .info h5{
+  font-size: 22px;
+  margin: 15px auto;
+}
+.pricing .container .info img{
+  max-width: 25%;
+  max-width: 65px
+}
+.pricing .container .info h3{
+  font-size: 57px;
+  font-family: 'SecondFont-toNumbers';
+  color: var(--main-color);
+  margin-top: 25px;
+}
+.pricing .container .info p{
+  color: #555;
+  font-size: 15px;
+  font-weight: bold;
+  margin: -6px;
+  margin-bottom: 15px;
+}
+.pricing .container .features {
+  margin: 15px;
+  position: relative;
+}
+
+.pricing .container .features p:not(:last-child){
+  border-bottom: 2px solid #ececec;
+}
+.pricing .container .features p {
+  /* border-bottom: 2px solid #ececec; */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.pricing .container .features p i{
+  font-size: 20px;
+    color: var(--main-color);
+    margin: 0 5px;
+}
+.pricing .container .btn {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pricing .container .btn button{
+  outline: none;
+  border: 3px solid var(--main-color);
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--main-color);
+  background-color: white;
+  font-weight: bold;
+  transition-duration: .3s;
+}
+.pricing .container .btn button:hover{
+  background-color: var(--main-color);
+  color: white;
+}
+/* End Pricing Section */
