@@ -1834,3 +1834,107 @@ section.features {
   margin: 4px 0 15px;
 }
 /* End Stats Section */
+/* Start Discount Section  */
+.discount{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.discount .container{
+  display: flex;
+  flex-direction: column;
+}
+.discount .container .first{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.discount .container .first h3{
+  margin: 15px auto;
+  text-align: center;
+  font-size: 22px;
+}
+.discount .container .first p{
+  width: 50%;
+  text-align: center;
+  color: #555;
+}
+@media (max-width:767px) {
+  .discount .container .first p{
+    width: 85%;
+  }
+}
+.discount .container .first .image-box{
+  width: 38%;
+  max-width: 400px;
+  order: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discount .container .first .image-box img{
+  max-width: 100%;
+  margin-top: -75px;
+}
+.discount .container .second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.discount .container .second form {
+  width: 85%;
+}
+.discount .container .second form h4 {
+  width: 80%;
+  font-size: 19px;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 2px solid var(--main-color);
+  padding-top: 20px;
+}
+.discount .container .second form input{
+  display: block;
+  width: 50%;
+  margin: 20px auto;
+  outline: none;
+  padding: 10px;
+  border: none;
+  background-color: var(--section-background);
+  border-bottom: 2.5px solid #ddd;
+  caret-color: var(--main-color);
+  font-family: SecondFont-toNumbers;
+  border-radius: 5px;
+}
+.discount .container .second form textarea {
+  font-family: SecondFont-toNumbers;
+  display: block;
+  width: 50%;
+  margin: 20px auto;
+  resize: none;
+  outline: none;
+  border: none;
+  padding: 10px;
+  background-color: var(--section-background);
+  border-bottom: 2.5px solid #ddd;
+  border-radius: 5px;
+  height: 130px;
+}
+.discount .container .second form input[type="submit"] {
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: white;
+  letter-spacing: 1px;
+  font-family: CairoPlay ;
+  cursor: pointer;
+}
+@media (max-width:767px) {
+  .discount .container .second form input,
+  .discount .container .second form textarea {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+/* End Discount Section  */
