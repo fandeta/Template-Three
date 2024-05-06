@@ -414,6 +414,8 @@ header .container .links .nav-ul .last-li:hover .mega-menu {
 }
 .mega-menu .links-of-sections li a{
   color: var(--main-color);
+  width: 100%;
+  display: block;
 }
 .mega-menu .links-of-sections li a i{
   color: var(--main-color);
