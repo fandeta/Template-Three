@@ -1644,3 +1644,191 @@ section.features {
   color: white;
 }
 /* End Pricing Section */
+/* Start Top Video Section */
+.top-videos {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.top-videos .container{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width:1000px) {
+  .top-videos .container{
+    flex-direction: column-reverse;
+  }
+}
+.top-videos .container .image-box{
+  border-radius: 6px;
+  margin: 0 20px;
+  border: 7px solid var(--section-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.top-videos .container .image-box img{
+  max-width: 100%;
+  max-width: 500px;
+
+}
+.top-videos .container .image-box p{
+  padding: 10px 5px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+
+}
+.top-videos .container .line-time{
+  min-width: 280px;
+  max-width: 100%;
+  margin: 0 45px;
+  border: 3px solid var(--section-background);
+  border-radius: 6px;
+}
+@media (max-width:1000px) {
+  .top-videos .container .line-time{
+    width: 80% !important;
+  }
+  .top-videos .container .image-box{
+    margin-top: 25px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+  }
+  .top-videos .container .image-box img{
+    max-width: 100%;
+  }
+  .top-videos .container .image-box p {
+    font-size: 15px;
+  }
+}
+.top-videos .container .line-time h2{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: var(--main-color);
+}
+.top-videos .container .line-time h2 i {
+  transition-duration: .3s;
+  cursor: pointer;
+}
+.top-videos .container .line-time h2 i:hover {
+  transform: scale(1.05);
+  color: red;
+}
+.top-videos .container .line-time p{
+  padding: 10px;
+  border-bottom: 1px solid var(--section-background);
+  text-transform: capitalize;
+  transition-duration: .3s;
+  position: relative;
+  cursor: pointer;
+}
+.top-videos .container .line-time p::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #f5f6f5;
+  width: 0;
+  height: 100%;
+  transition-duration: .6s;
+  z-index: -2;
+}
+.top-videos .container .line-time p:hover::before{
+  width: 100%;
+}
+.top-videos .container .line-time p:hover{
+  color: var(--main-color);
+}
+/* End Top Video Section */
+/* Start Stats Section */
+.stats{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-color: var(--section-background);
+}
+.stats .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px , 1fr));
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width:1500px) {
+  .stats .container{
+    grid-template-columns: repeat(4, minmax(280px , 410px));
+  }
+  
+}
+.stats .container .box{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 15px;
+  border-radius:10px;
+  position: relative;
+  transition-duration: .3s;
+  overflow: hidden;
+}
+.stats .container .box:hover{
+  transform: translateY(-15px);
+  background-color: #ffffffad;
+}
+.stats .container .box::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -100%;
+  width: 3px;
+  height: 100%;
+  background-color: var(--main-color);
+  transition-duration: .5s;
+}
+.stats .container .box:hover::before{
+  bottom: 0;
+}
+.stats .container .box::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 3px;
+  height: 100%;
+  background-color: var(--main-color);
+  transition-duration: .5s;
+}
+.stats .container .box:hover::after{
+  top: 0;
+}
+
+
+
+
+.stats .container .box i{
+  font-size: 35px;
+  margin: 20px;
+  color: #555;
+}
+.stats .container .box span{
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'SecondFont-toNumbers';
+  margin: 0 65px;
+
+}
+.stats .container .box p{
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--main-color);
+  margin: 4px 0 15px;
+}
+/* End Stats Section */
