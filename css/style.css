@@ -1976,7 +1976,7 @@ footer .title-icons .icons{
 }
 footer .title-icons .icons a{
   display: block;
-  margin: 5px 8px;
+  margin: 10px 10px;
   font-size: 25px;
   transition-duration: .3s;
   overflow: hidden;
@@ -1999,14 +1999,13 @@ footer .title-icons .icons a:hover::before {
 }
 
 footer .title-icons .icons a img {
-  width: 40px;
+  width: 35px;
   opacity: .75;
   transition-duration: .3s;
 }
 @media (max-width:767px) {
   footer .title-icons .icons a img {
-    width: 33px;
-    
+    width: 25px;
   }
 }
 footer .title-icons .icons a:hover img {
