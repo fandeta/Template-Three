@@ -1999,13 +1999,13 @@ footer .title-icons .icons a:hover::before {
 }
 
 footer .title-icons .icons a img {
-  width: 35px;
+  width: 30px;
   opacity: .75;
   transition-duration: .3s;
 }
 @media (max-width:767px) {
   footer .title-icons .icons a img {
-    width: 25px;
+    width: 23px;
   }
 }
 footer .title-icons .icons a:hover img {
